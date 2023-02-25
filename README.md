@@ -4,7 +4,9 @@
 ## Game Overview
 
 **Type:** War (card game)
+
 **Num players:** 2
+
 **Objective:** Using a standard 52 card deck, two players go head to head with a winner declared when all 52 cards are in one of the player’s possession, leaving the other player without any cards.
 
 ## Basic Logic
