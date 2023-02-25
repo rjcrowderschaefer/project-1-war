@@ -1,6 +1,12 @@
 
 # Project 1 - SEI-024 - RJ Crowder-Schaefer
 
+## Additional References:
+
+* [Overview & User Behaviors](https://docs.google.com/document/d/1q5OINmezczvxB7SqI4vA7HNZpvmRJ5ot9DSpHzc-dcM/edit?usp=sharing)
+
+* [Wireframe Mockups](https://www.figma.com/file/sgrSk5PUlpyOf4voi0thmm/Project-1---War---Wireframing?node-id=0%3A1&t=PREep9noM7QPLZom-1)
+
 ## Game Overview
 
 **Type:** War (card game)
