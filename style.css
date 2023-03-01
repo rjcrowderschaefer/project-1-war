@@ -1,0 +1,223 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    color: green;
+    font-size: 4em;
+    padding: 40px 0 0 0;
+    line-height: 35px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+.player1-card-name {
+    background-color: #ffac9a;
+    padding: 100px 50px 200px 50px;
+    margin-bottom: 50px;
+    width: 325px;
+    font-size: 1.8em;
+    border: solid 3px;
+    border-radius: 5px;
+}
+
+.player2-card-name {
+    background-color: #9adbff;
+    padding: 100px 50px 200px 50px;
+    margin-bottom: 50px;
+    width: 325px;
+    font-size: 1.8em;
+    border: solid 3px;
+    border-radius: 5px;
+}
+
+.player1-card-num {
+    font-size: 2.2em
+}
+
+.card1-1 {
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 1;
+    margin: 18px 75px;
+    background-color: #ffac9a;
+    border: solid 1px;
+    border-radius: 5px
+   
+}
+
+.card1-2 {
+    padding: 50px;
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 2;
+    margin: 12px 70px;
+    background-color: #ff2f01;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.card1-3 {
+    padding: 50px;
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 3;
+    margin: 6px 65px;
+    background-color: #ffac9a;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.card1-4 {
+    padding: 80px 30px;
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 4;
+    margin: 0 60px;
+    background-color: #ff2f01;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.player1-deck-name {
+    text-align: left;
+    white-space: nowrap;
+    font-size: 1.8em;
+}
+
+.player1-deck-total{
+    text-align: center;
+}
+
+.player1-wins {
+    margin-top: 330px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.player2-card-num {
+    font-size: 2.2em;
+}
+
+.card2-1 {
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 1;
+    margin: 18px 75px;
+    background-color: #9adbff;
+    border: solid 1px;
+    border-radius: 5px
+   
+}
+
+.card2-2 {
+    padding: 50px;
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 2;
+    margin: 12px 70px;
+    background-color: #02a4ff;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.card2-3 {
+    padding: 50px;
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 3;
+    margin: 6px 65px;
+    background-color: #9adbff;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.card2-4 {
+    padding: 80px 30px;
+    position: absolute;
+    height: 250px;
+    width:200px;
+    z-index: 4;
+    margin: 0 60px;
+    background-color: #02a4ff;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.player2-deck-name {
+    text-align: left;
+    white-space: nowrap;
+    font-size: 1.8em;
+}
+
+.player2-deck-total{
+    text-align: center;
+}
+
+.player2-wins {
+    margin-top: 330px; 
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.center-column {
+    padding-top: 20vh;
+}
+
+.vs {
+    font-size: 3em;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+
+.btn {
+    width: 175px;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: solid 1px black;
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.start-game {
+    padding: 10px 10px 5px 10px;
+}
+
+.play-again {
+    padding: 3px 10px 0 10px;
+}
+
+.lets-battle {
+    padding: 150px 10px 5px 10px;
+}
+
+.lets-war {
+    padding: 3px 10px 5px 10px;
+}
+
+.lets-war-again {
+    padding: 3px 10px 5px 10px;
+}
+
+.war-wins {
+    font-weight: bold;
+    font-size: 1.1em;
+}
