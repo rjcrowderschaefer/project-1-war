@@ -36,3 +36,5 @@
 
 1. A player wins once they have all 52 cards in their possession.
 2. A player will automatically lose if they run out of cards during a "War" scenario.
+
+

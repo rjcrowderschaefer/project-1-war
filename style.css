@@ -1,9 +1,14 @@
 
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 h1 {
     text-align: center;
     color: green;
@@ -28,6 +33,7 @@ h3 {
     font-size: 1.8em;
     border: solid 3px;
     border-radius: 5px;
+    user-select: none;
 }
 
 .player2-card-name {
@@ -38,6 +44,7 @@ h3 {
     font-size: 1.8em;
     border: solid 3px;
     border-radius: 5px;
+    user-select: none;
 }
 
 .player1-card-num {
@@ -96,20 +103,24 @@ h3 {
     text-align: left;
     white-space: nowrap;
     font-size: 1.8em;
+    user-select: none;
 }
 
 .player1-deck-total{
     text-align: center;
+    user-select: none;
 }
 
 .player1-wins {
     margin-top: 330px;
     font-weight: bold;
     font-size: 1.1em;
+    user-select: none;
 }
 
 .player2-card-num {
     font-size: 2.2em;
+    user-select: none;
 }
 
 .card2-1 {
@@ -158,22 +169,26 @@ h3 {
     background-color: #02a4ff;
     border: solid 1px;
     border-radius: 5px;
+    user-select: none;
 }
 
 .player2-deck-name {
     text-align: left;
     white-space: nowrap;
     font-size: 1.8em;
+    user-select: none;
 }
 
 .player2-deck-total{
     text-align: center;
+    user-select: none;
 }
 
 .player2-wins {
     margin-top: 330px; 
     font-weight: bold;
     font-size: 1.1em;
+    user-select: none;
 }
 
 .center-column {
