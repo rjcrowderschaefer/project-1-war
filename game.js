@@ -9,6 +9,20 @@
 const suits = ['♠', '♥', '♦', '♣'];
 const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
+const player1Slot = document.querySelector(".player1-card-slot")
+const player2Slot = document.querySelector(".player2-card-slot")
+const player1DeckTotal = document.querySelector(".player1-deck")
+const player2DeckTotal = document.querySelector(".player2-deck")
+const winnerAlert = document.querySelector(".winner-text")
+
+document.querySelector('.lets-battle').style.visibility = "hidden";
+document.querySelector('.play-again').style.visibility = "hidden";
+document.querySelector('.lets-war').style.visibility = "hidden";
+document.querySelector('.lets-war-again').style.visibility = "hidden";
+document.querySelector('.war-name').style.visibility = "hidden";
+document.querySelector('.war-total').style.visibility = "hidden";
+
+
 class Card {
   constructor(suit, value) {
     this.suit = suit;
@@ -28,6 +42,7 @@ class Card {
       return this;
     }
   }
+ 
 }
 
 class Deck {
@@ -57,52 +72,79 @@ const deckMiddle = Math.ceil(deck.cards.length / 2);
 const player1Deck = new Deck(deck.cards.slice(0, deckMiddle));
 const player2Deck = new Deck(deck.cards.slice(deckMiddle, deck.cards.length));
 
-// console.log(player1Deck);
-// console.log(player2Deck);
+console.log(player1Deck);
+console.log(player2Deck);
 
 // Part Two - Gameplay Functions (upon "Battle" or "War" button selection)
 
 function startGame() {
     deck.shuffle();
+    document.querySelector('.start-game').style.display = 'block'; 
+    this.style.display = 'none';
+    document.querySelector('.lets-battle').style.visibility = "visible";
+    document.querySelector('.player1-deck-total').innerText = player1Deck.cards.length;
+    document.querySelector('.player2-deck-total').innerText = player2Deck.cards.length;
+
+
 }
 
 function battleTime() {
     const player1Card = player1Deck.deal();
     const player2Card = player2Deck.deal();
-
     const winningCard = player1Card.compare(player2Card);
 
+    console.log(player1Card)
+    console.log(player2Card)
+    document.querySelector('.player1-card-num').innerText = player1Card.value + player1Card.suit;
+    document.querySelector('.player2-card-num').innerText = player2Card.value + player2Card.suit;
 
     if (player1Card.value === player2Card.value) {
-        console.log(player1Card)
-        console.log(player2Card)
+        // console.log(player1Card)
+        // console.log(player2Card)
         console.log(`It's a tie!`);
+        document.querySelector('.text').innerText = 'Tie';
         warTime(player1Card, player2Card);
+        document.querySelector('.lets-battle').style.display = 'block'; 
+    this.style.display = 'none';
+    document.querySelector('.lets-war').style.visibility = "visible";
     }
   
   else if (winningCard === player1Card) {
     // console.log(player1Card)
     // console.log(player2Card)
-    console.log(`Player 1 wins!`);
+    // console.log(`Player 1 wins!`);
+    document.querySelector('.text').innerText = 'Player 1 wins!';
     player1Deck.cards.push(player1Card)
     player1Deck.cards.push(player2Card)
     // console.log(player1Deck)
   } else if (winningCard === player2Card) {
     // console.log(player1Card)
     // console.log(player2Card)
-    console.log(`Player 2 wins!`);
+    // console.log(`Player 2 wins!`);
+    document.querySelector('.text').innerText = 'Player 2 wins!';
     player2Deck.cards.push(player1Card)
     player2Deck.cards.push(player2Card)
     // console.log(player2Deck)
   } else {
     console.log(`There's an error happening`);
-  }
+  } console.log(
+    player1Deck,
+    player2Deck,
+  )
+  renderView();
 }
-battleTime();
-console.log(player1Deck.cards.length)
-console.log(player2Deck.cards.length)
-// console.log(player1Deck);
-// console.log(player2Deck)
+
+function renderView() {
+  document.querySelector('.player1-deck-total').innerHTML = player1Deck.cards.length;
+  document.querySelector('.player2-deck-total').innerHTML = player2Deck.cards.length;
+
+}
+
+// battleTime();
+// console.log(player1Deck.cards.length)
+// console.log(player2Deck.cards.length)
+// // console.log(player1Deck);
+// // console.log(player2Deck)
 
 function warTime(card1, card2){
     let player1CardCurrent = player1Deck.deal();
@@ -117,13 +159,14 @@ function warTime(card1, card2){
         player1Deck.cards.push(card1, card2, player1CardCurrent, player2CardCurrent)
         player1Deck.cards = player1Deck.cards.concat(warCards)
     } else {
-        // logif for adding to player 2 array
+        // logic for adding to player 2 array
         player2Deck.cards.push(card1, card2, player1CardCurrent, player2CardCurrent)
         player2Deck.cards = player2Deck.cards.concat(warCards)
     }
+
 }
 
-document.querySelector('.start-game').addEventListener("click", battleTime);
+
 
 /**
  * Grab & compare first index of each player deck
@@ -142,6 +185,12 @@ document.querySelector('.start-game').addEventListener("click", battleTime);
  */
 
 // Part Four - DOM Manipulation
+
+document.querySelector('.start-game').addEventListener("click", startGame);
+document.querySelector('.lets-battle').addEventListener("click", battleTime);
+document.querySelector('.lets-war').addEventListener("click", warTime);
+
+
 
 
 /**

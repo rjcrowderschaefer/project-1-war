@@ -25,7 +25,7 @@ h3 {
     font-size: 2.5em;
 }
 
-.player1-card-name {
+.player1-card-slot {
     background-color: #ffac9a;
     padding: 100px 50px 200px 50px;
     margin-bottom: 50px;
@@ -36,7 +36,7 @@ h3 {
     user-select: none;
 }
 
-.player2-card-name {
+.player2-card-slot {
     background-color: #9adbff;
     padding: 100px 50px 200px 50px;
     margin-bottom: 50px;
@@ -99,7 +99,7 @@ h3 {
     border-radius: 5px;
 }
 
-.player1-deck-name {
+.player1-deck {
     text-align: left;
     white-space: nowrap;
     font-size: 1.8em;
@@ -172,7 +172,7 @@ h3 {
     user-select: none;
 }
 
-.player2-deck-name {
+.player2-deck {
     text-align: left;
     white-space: nowrap;
     font-size: 1.8em;
@@ -196,6 +196,12 @@ h3 {
 }
 
 .vs {
+    font-size: 3em;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+
+.text {
     font-size: 3em;
     text-transform: uppercase;
     padding-bottom: 25px;
