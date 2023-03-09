@@ -9,27 +9,48 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #1d6836;
+}
+
 h1 {
     text-align: center;
-    color: green;
-    font-size: 4em;
-    padding: 40px 0 0 0;
-    line-height: 35px;
+    color: rgb(128, 13, 0);
+    font-size: 8em;
+    font-family: 'Climate Crisis', cursive;
+    text-shadow: 2px 2px #FFD700;
+    padding: 60px 0 0 0;
+    line-height: 100px;
 }
 
 h2 {
     text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    color: #FFD700;
+    text-shadow: 2px 2px rgb(128, 13, 0);
 }
 
 h3 {
     font-size: 2.5em;
 }
 
+.header-player1 {
+    color: #ffac9a;
+    text-shadow: 2px 2px rgb(128, 13, 0);
+}
+
+.header-player2 {
+    color: #9adbff;
+    text-shadow: 2px 2px rgb(128, 13, 0);
+}
+
+
 .player1-card-slot {
     background-color: #ffac9a;
     padding: 100px 50px 200px 50px;
     margin-bottom: 50px;
     width: 325px;
+    height: 513px;
     font-size: 1.8em;
     border: solid 3px;
     border-radius: 5px;
@@ -41,6 +62,7 @@ h3 {
     padding: 100px 50px 200px 50px;
     margin-bottom: 50px;
     width: 325px;
+    height: 513px;
     font-size: 1.8em;
     border: solid 3px;
     border-radius: 5px;
@@ -109,6 +131,21 @@ h3 {
 .player1-deck-total{
     text-align: center;
     user-select: none;
+}
+
+.player1-deck-name {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    color: black;
+    text-shadow: 1px 1px #ffac9a;
+}
+
+.player2-deck-name {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    color: black;
+    text-shadow: 1px 1px #9adbff;
+
 }
 
 .player1-wins {
@@ -218,7 +255,7 @@ h3 {
 
 }
 
-.start-game {
+/* .start-game {
     padding: 10px 10px 5px 10px;
 }
 
@@ -236,9 +273,23 @@ h3 {
 
 .lets-war-again {
     padding: 3px 10px 5px 10px;
-}
+} */
 
 .war-wins {
     font-weight: bold;
     font-size: 1.1em;
+}
+
+.player2-win {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    color: #02a4ff;
+    text-shadow: 1px 1px black;
+}
+
+.player1-win {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    color: #ffac9a;
+    text-shadow: 1px 1px black;
 }
