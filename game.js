@@ -104,8 +104,13 @@ function battleTime() {
     const winningCard = player1Card.compare(player2Card);
 
     
-    document.querySelector('.player1-card-num').innerText = player1Card.value + player1Card.suit;
-    document.querySelector('.player2-card-num').innerText = player2Card.value + player2Card.suit;
+    document.querySelector('.player1-card-value-top').innerText = player1Card.value
+    document.querySelector('.player1-card-value-bottom').innerText = player1Card.value
+    document.querySelector('.player1-card-suit').innerText = player1Card.suit;
+    document.querySelector('.player2-card-value-top').innerText = player2Card.value
+    document.querySelector('.player2-card-value-bottom').innerText = player2Card.value
+    document.querySelector('.player2-card-suit').innerText = player2Card.suit;
+ 
 
     if (player1Card.value === player2Card.value) {
         currentWarStarters[0] = player1Card
@@ -117,12 +122,12 @@ function battleTime() {
     }
   
   else if (winningCard === player1Card) {
-    document.querySelector('.player1-win').innerText = 'Player 1 wins!';
+    document.querySelector('.text').innerText = 'Player 1 wins!';
     p1HandsWon++;
     player1Deck.cards.push(player1Card)
     player1Deck.cards.push(player2Card)
   } else if (winningCard === player2Card) {
-    document.querySelector('.player2-win').innerText = 'Player 2 wins!';
+    document.querySelector('.text').innerText = 'Player 2 wins!';
     p2HandsWon++;
     player2Deck.cards.push(player1Card)
     player2Deck.cards.push(player2Card)
@@ -158,9 +163,13 @@ function warTime(){
         player1CardCurrent = player1Deck.deal();
         player2CardCurrent = player2Deck.deal();
         console.log(card1, card2, player1CardCurrent, player2CardCurrent)
-
-        document.querySelector('.player1-card-num').innerText = player1CardCurrent.value + player1CardCurrent.suit;
-        document.querySelector('.player2-card-num').innerText = player2CardCurrent.value + player2CardCurrent.suit;
+        
+        document.querySelector('.player1-card-value-top').innerText = player1CardCurrent.value;
+        document.querySelector('.player1-card-value-bottom').innerText = player1CardCurrent.value;
+        document.querySelector('.player1-card-suit').innerText = player1CardCurrent.suit;
+        document.querySelector('.player2-card-value-top').innerText = player2CardCurrent.value;
+        document.querySelector('.player2-card-value-bottom').innerText = player2CardCurrent.value;
+        document.querySelector('.player2-card-suit').innerText = player2CardCurrent.suit;
         document.querySelector('.player1-deck-total').innerHTML = player1Deck.cards.length;
         document.querySelector('.player2-deck-total').innerHTML = player2Deck.cards.length;
         document.querySelector('.lets-war').style.display = 'block'; 
@@ -173,8 +182,14 @@ function warTime(){
         
     } if (player1CardCurrent.value > player2CardCurrent.value) {
         // logic for adding to player 1 array
-        document.querySelector('.player1-card-num').innerText = player1CardCurrent.value + player1CardCurrent.suit;
-        document.querySelector('.player2-card-num').innerText = player2CardCurrent.value + player2CardCurrent.suit;
+        // document.querySelector('.player1-card-num').innerText = player1CardCurrent.value + player1CardCurrent.suit;
+        // document.querySelector('.player2-card-num').innerText = player2CardCurrent.value + player2CardCurrent.suit;
+        document.querySelector('.player1-card-value-top').innerText = player1CardCurrent.value;
+        document.querySelector('.player1-card-value-bottom').innerText = player1CardCurrent.value;
+        document.querySelector('.player1-card-suit').innerText = player1CardCurrent.suit;
+        document.querySelector('.player2-card-value-top').innerText = player2CardCurrent.value;
+        document.querySelector('.player2-card-value-bottom').innerText = player2CardCurrent.value;
+        document.querySelector('.player2-card-suit').innerText = player2CardCurrent.suit;
         document.querySelector('.player1-deck-total').innerHTML = player1Deck.cards.length;
         document.querySelector('.player2-deck-total').innerHTML = player2Deck.cards.length;
         player1Deck.cards.push(card1, card2, player1CardCurrent, player2CardCurrent)
@@ -183,12 +198,18 @@ function warTime(){
         document.querySelector('.lets-war').style.display = 'block'; 
         this.style.visibility = 'hidden';
         document.querySelector('.lets-battle').style.visibility = "visible";
-        document.querySelector('.text').innerText = 'Player 1 has won the war';
+        document.querySelector('.text').innerText = 'Player 1 Win';
         p1HandsWon++
     } else {
         // logic for adding to player 2 array
-        document.querySelector('.player1-card-num').innerText = player1CardCurrent.value + player1CardCurrent.suit;
-        document.querySelector('.player2-card-num').innerText = player2CardCurrent.value + player2CardCurrent.suit;
+        // document.querySelector('.player1-card-num').innerText = player1CardCurrent.value + player1CardCurrent.suit;
+        // document.querySelector('.player2-card-num').innerText = player2CardCurrent.value + player2CardCurrent.suit;
+        document.querySelector('.player1-card-value-top').innerText = player1CardCurrent.value;
+        document.querySelector('.player1-card-value-bottom').innerText = player1CardCurrent.value;
+        document.querySelector('.player1-card-suit').innerText = player1CardCurrent.suit;
+        document.querySelector('.player2-card-value-top').innerText = player2CardCurrent.value;
+        document.querySelector('.player2-card-value-bottom').innerText = player2CardCurrent.value;
+        document.querySelector('.player2-card-suit').innerText = player2CardCurrent.suit;
         document.querySelector('.player1-deck-total').innerHTML = player1Deck.cards.length;
         document.querySelector('.player2-deck-total').innerHTML = player2Deck.cards.length;
         player2Deck.cards.push(card1, card2, player1CardCurrent, player2CardCurrent)
@@ -198,7 +219,7 @@ function warTime(){
         document.querySelector('.lets-war').style.display = 'block'; 
         this.style.visibility = 'hidden';
         document.querySelector('.lets-battle').style.visibility = "visible";
-        document.querySelector('.text').innerText = 'Player 2 has won the war';
+        document.querySelector('.text').innerText = 'Player 2 Wins';
 
         p2HandsWon++
     }

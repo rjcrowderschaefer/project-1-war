@@ -50,7 +50,7 @@ h3 {
     padding: 100px 50px 200px 50px;
     margin-bottom: 50px;
     width: 325px;
-    height: 513px;
+    height: 444px;
     font-size: 1.8em;
     border: solid 3px;
     border-radius: 5px;
@@ -62,15 +62,40 @@ h3 {
     padding: 100px 50px 200px 50px;
     margin-bottom: 50px;
     width: 325px;
-    height: 513px;
+    height: 444px;
     font-size: 1.8em;
     border: solid 3px;
     border-radius: 5px;
     user-select: none;
 }
 
-.player1-card-num {
+/* .player1-card-num {
     font-size: 2.2em
+} */
+
+.player1-card-value-top {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    font-size: 3em;
+
+}
+
+.player1-card-value-bottom {
+    position: absolute;
+    top: 253px;
+    left: 250px;
+    font-size: 3em;
+    transform: rotate(180deg); 
+    transform-origin: bottom;
+}
+
+.player1-card-suit {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    font-size: 8em;
+
 }
 
 .card1-1 {
@@ -155,9 +180,33 @@ h3 {
     user-select: none;
 }
 
-.player2-card-num {
+/* .player2-card-num {
     font-size: 2.2em;
     user-select: none;
+} */
+
+.player2-card-value-top {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    font-size: 3em;
+
+}
+
+.player2-card-value-bottom {
+    position: absolute;
+    top: 253px;
+    left: 250px;
+    font-size: 3em;
+    transform: rotate(180deg); 
+    transform-origin: bottom;
+}
+
+.player2-card-suit {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    font-size: 8em;
 }
 
 .card2-1 {
@@ -232,12 +281,6 @@ h3 {
     padding-top: 20vh;
 }
 
-.vs {
-    font-size: 3em;
-    text-transform: uppercase;
-    padding-bottom: 25px;
-}
-
 .text {
     font-size: 3em;
     text-transform: uppercase;
@@ -280,16 +323,26 @@ h3 {
     font-size: 1.1em;
 }
 
-.player2-win {
+.text {
     text-align: center;
     font-family: 'Tilt Warp', cursive;
-    color: #02a4ff;
-    text-shadow: 1px 1px black;
+    color: #FFD700;
+    text-shadow: 2px 2px rgb(128, 13, 0);
 }
 
-.player1-win {
+.vs {  
+    object-fit: cover;  
+}  
+    
+
+.player1-wins {
     text-align: center;
-    font-family: 'Tilt Warp', cursive;
     color: #ffac9a;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px rgb(128, 13, 0);
+}
+
+.player2-wins {
+    text-align: center;
+    color: #9adbff;
+    text-shadow: 2px 2px rgb(128, 13, 0);
 }
