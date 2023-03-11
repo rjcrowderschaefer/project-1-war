@@ -1,8 +1,7 @@
-
-
 *, *::after, *::before {
     box-sizing: border-box;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +18,7 @@ h1 {
     font-size: 8em;
     font-family: 'Climate Crisis', cursive;
     text-shadow: 2px 2px #FFD700;
-    padding: 60px 0 0 0;
+    padding: 20px 0 0 0;
     line-height: 100px;
 }
 
@@ -44,7 +43,6 @@ h3 {
     text-shadow: 2px 2px rgb(128, 13, 0);
 }
 
-
 .player1-card-slot {
     background-color: #ffac9a;
     padding: 100px 50px 200px 50px;
@@ -68,10 +66,6 @@ h3 {
     border-radius: 5px;
     user-select: none;
 }
-
-/* .player1-card-num {
-    font-size: 2.2em
-} */
 
 .player1-card-value-top {
     position: absolute;
@@ -180,17 +174,11 @@ h3 {
     user-select: none;
 }
 
-/* .player2-card-num {
-    font-size: 2.2em;
-    user-select: none;
-} */
-
 .player2-card-value-top {
     position: absolute;
     top: 45px;
     left: 30px;
     font-size: 3em;
-
 }
 
 .player2-card-value-bottom {
@@ -218,7 +206,6 @@ h3 {
     background-color: #9adbff;
     border: solid 1px;
     border-radius: 5px
-   
 }
 
 .card2-2 {
@@ -295,28 +282,7 @@ h3 {
     border: solid 1px black;
     border-radius: 10px;
     box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
-
 }
-
-/* .start-game {
-    padding: 10px 10px 5px 10px;
-}
-
-.play-again {
-    padding: 3px 10px 0 10px;
-}
-
-.lets-battle {
-    padding: 150px 10px 5px 10px;
-}
-
-.lets-war {
-    padding: 3px 10px 5px 10px;
-}
-
-.lets-war-again {
-    padding: 3px 10px 5px 10px;
-} */
 
 .war-wins {
     font-weight: bold;
@@ -333,7 +299,6 @@ h3 {
 .vs {  
     object-fit: cover;  
 }  
-    
 
 .player1-wins {
     text-align: center;
