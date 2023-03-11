@@ -9,8 +9,6 @@ document.querySelector('.lets-battle').style.visibility = "hidden";
 document.querySelector('.play-again').style.visibility = "hidden";
 document.querySelector('.lets-war').style.visibility = "hidden";
 document.querySelector('.lets-war-again').style.visibility = "hidden";
-document.querySelector('.war-name').style.visibility = "hidden";
-document.querySelector('.war-total').style.visibility = "hidden";
 
 class Card {
   constructor(suit, value) {
